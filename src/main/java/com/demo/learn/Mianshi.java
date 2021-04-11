@@ -1,10 +1,8 @@
-package com.demo.mianshi;
+package com.demo.learn;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.LinkedList;
-import java.util.Set;
 
 /**
  * @author pan
