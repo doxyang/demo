@@ -1,4 +1,4 @@
-package com.demo.mode23;
+package com.demo.chan23;
 
 public class ModeMain {
 }

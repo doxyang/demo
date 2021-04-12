@@ -1,4 +1,4 @@
-package com.demo.mode23.singleton;
+package com.demo.chan23.singleton;
 
 /**
  * 1) 单例模式保证了 系统内存中该类只存在一个对象，节省了系统资源，对于一些需要频繁创建销毁的对象，使

@@ -1,4 +1,4 @@
-package com.demo.mode23.singleton;
+package com.demo.chan23.singleton;
 
 /**
  * @author pan
