@@ -11,9 +11,10 @@ import java.lang.reflect.Proxy;
 public class ProxyApp {
     public static void main(String[] args) {
 
-        IAction action = new ActionPrintIml();
+        ActionPrintIml action = new ActionPrintIml();
         InvocationHandler handle = new ProxyHandle(action);
-        IAction iAction = (IAction) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(), action.getClass().getInterfaces(), handle);
-        iAction.doSomeThing();
+        Class<?>[] interfaces = action.getClass().getInterfaces();
+        ICheck iAction = (ICheck) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(), action.getClass().getInterfaces(), handle);
+        iAction.doCheck();
     }
 }
