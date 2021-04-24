@@ -8,6 +8,15 @@
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
 
+    <!--把applicationContext.xml加入到配置文件中-->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>WEB-INF/applicationContext.xml</param-value>
+    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
+
     <!--配置springmvc DispatcherServlet-->
     <servlet>
         <servlet-name>springMVC</servlet-name>
@@ -15,7 +24,7 @@
         <init-param>
             <!--Sources标注的文件夹下需要新建一个spring文件夹-->
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:spring/spring-mvc.xml</param-value>
+            <param-value>WEB-INF/spring-mvc.xml</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
         <async-supported>true</async-supported>
@@ -25,12 +34,4 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
-    <!--把applicationContext.xml加入到配置文件中-->
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:spring/applicationContext.xml</param-value>
-    </context-param>
-    <listener>
-    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
 </web-app>
